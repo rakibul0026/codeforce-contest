@@ -1,27 +1,22 @@
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
  
-int n;
-string help = "aeiou";
+const string VOWELS = "aeiou";
  
-void solve() {
-  cin >> n;
-  int k = (n + 4) / 5;
-  string ans = "";
-  for (int i = 0; i < k; i++)
-    for (int j = 0; j < 5; j++)
-      ans += help[j];   
-  while (ans.size() > n)
-    ans.pop_back();
-  sort(ans.begin(), ans.end());
-  cout << ans << endl;
+int main()
+{
+ios_base::sync_with_stdio(false);
+cin.tie(0); cout.tie(0);
+ 
+int t; cin >> t; 
+ 
+while (t--) {
+int n; cin >> n; 
+ 
+vector<int> v(5, n / 5);                
+for (int i = 0; i < n % 5; i++) v[i]++; 
+ 
+for (int i = 0; i < 5; i++) for (int j = 0; j < v[i]; j++) cout << VOWELS[i]; 
+cout << "\n";
 }
- 
-int main() {
-  int t;
-  cin >> t;
-  while (t--)
-    solve();
-   return 0;
 }
