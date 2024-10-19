@@ -1,23 +1,13 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-    int t;
-    cin >> t; 
-
-    for (int _ = 0; _ < t; ++_) {
-        int n;
-        cin >> n;
-
-       
-        for (int i = 0; i < n - 1; ++i) {
-            cout << '0';
-        }
-
-    
-        cout << '1' << endl;
+void solve(){
+    int n; cin>>n;
+    for(int i=0;i<n-1;i++){
+        cout<<0;
     }
-
-    return 0;
+    cout<<1<<endl;
+ 
 }
-
+int main(){
+    int t; cin>>t; while(t--) solve();
+}
